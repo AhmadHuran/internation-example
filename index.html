@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reset.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/sky.css">
+        <link rel="stylesheet" href="css/internation.css">
+        <link rel="stylesheet" href="css/fsfx.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="menubar" id="menubar" style="position: absolute; bottom:30px">
+                <button 
+                    class="fsbutton icon-fs" 
+                    data-fs-toggle="icon-fsexit"
+                    style="margin-right: 0.7em ; display: table-cell;">
+                </button>
+                <div class="langchooser" style="display: table;">
+                
+                    <label style="display: table-cell; margin-left: 0.5em">
+                        <input type="radio" name="menulangradios" value="en" checked><span>en</span>
+                    </label>
+                    <label style="display: table-cell; margin-left: 0.5em">
+                        <input type="radio" name="menulangradios" value="it"><span>it</span>
+                    </label>
+                </div>
+            </div>
+            <div class="slides">
+                <!--Title slide-->
+                <section id="title_slide"> 
+                    <h1 class="r-fit-text" data-i18n="title_header">
+                        ARPA Lombardia Progress Report
+                    </h1>
+                    <h3>
+                        <u>Author 1</u> &amp; Author 2
+                    </h3>
+                    <h3>
+                        01. 01. 2718
+                    </h3>
+                    <div class="langchooser flags">
+                        <label>
+                            <input type="radio" name="langradios" value="en" checked><img type="image/svg+xml" src="img/UK.flag.svg">
+                        </label>
+                        <label>
+                            <input type="radio" name="langradios" value="it"><img type="image/svg+xml" src="img/IT.flag.svg">
+                        </label>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+        <script src="plugin/internation/internation.js"></script>
+        <script src="plugin/fsfx/fsfx.js"></script>
+        <script src="js/italian.js"></script>
+        <script>
+            Reveal.initialize({
+                internation: {
+                locale: "en",
+                localename: 'English',
+                makejson: false,
+                reload_on_lang_change: true,
+                languages:{
+                it: italianDict
+                },
+                },
+            
+                hash: true,
+                history: true,
+                Progress: true,
+                plugins: [FsFx, Internation],
+                
+            })
+        </script>
+
+    </body>
+</html>

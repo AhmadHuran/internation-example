@@ -1,0 +1,139 @@
+/***************************************************************************
+MIT License
+
+Copyright (c) 2022 Martijn De Jongh (Martino)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+*****************************************************************************/
+.fsbutton {
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.reveal .fsbutton {
+  border: 1px solid;
+  margin: 0;
+  padding: 0;
+  background: none;
+  color: var(--r-main-color);
+  background-color:#add9e4;
+  font-size: 1rem;
+  font-size: clamp(1rem, 1vw + 1rem, 2rem);
+  line-height: 0;
+  padding: 6px;
+  opacity: 0.8;
+  -webkit-transition: opacity 0.15s ease-in-out; 
+  -o-transition: opacity 0.15s ease-in-out; 
+  transition: opacity 0.15s ease-in-out; 
+  -webkit-transition: border 0.1s ease-in-out;
+  -o-transition: border 0.1s ease-in-out;
+  transition:  border 0.1s ease-in-out;
+  -webkit-transition: font-size 0.1s ease-in-out;
+  -o-transition: font-size 0.1s ease-in-out;
+  transition:  font-size 0.1s ease-in-out;
+}
+
+.reveal .fsbutton:hover {
+  opacity: 1;
+  border: 2px solid;
+  font-size: clamp(1rem, 2vw + 1rem, 3rem);  
+}
+
+.hide {
+  opacity: 0;
+}
+
+@font-face {
+  font-family: 'cool_font';
+  src: url(data:application/font-woff2;charset=utf-8;base64,d09GMgABAAAAAAV8ABAAAAAADBQAAAUgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP0ZGVE0cGh4GVgCDGggCCYRlEQgKhGCDUws4AAE2AiQDbAQgBYM2B4F6DC4bLwpRlC5OFuKLA/P0TxEUHZtU6JAwnklQvqB/+/AsBwWNtdmzF0dEm+aP0NRCJuFZLHklkpI18wqhUP//z3u7r4AyuDkZ/6QC3yuc/yuNleFS2PK2HXoHeAfuRGC732i2rPOUAgktSiTYgFvMBgp8sA3rf+z6wv+7pjZ5d2k7ckAayDgCi0JOqN7vIAUCN0ASbp6MBCLHkoWa5eenJt0W2bWDeUo4FiCA97X9WwDgp2y6Zy9dJrzJJFAGMAhRheEAA8hPsa1scb7HdhtQHaxsnzGnF4DBxxgzih8dPlntkMq19Y+d+Z8ZIAodanI7k9cw8bFU4e+yYRVQxYM1cSBFN02SJofRCX0wBJum/vkPcRjg+EUVLu/s/9o3Dm/s67/XZ55NAsaYRAFEcWQAQyZRhMWRK89/CjR5WTbhEguJSngXUGEpp/w5gkBJCaBg4kmCfeWLBT4g5h0coJFUfEYuJo2MWlDOsxQha2TVzgCkfCmXKS80curS88iKvIC/lG4KSdXF/0qfcZcik5dFUfYc4RIiQOOdQXWtr9UoqKNNbF0pJ1w3Xy8RQqNIZFr4qbWjqpcnxoXgnpiKi7dz4GvSTYFkp+YpSG5aPkEpN3SjBaFhrCTLQjIYbDlsUxbfQZOH5MFqoFFCxXtHRJP4EUIoYqrniDlKdksXcmxvXQuoSlIb57wKDQ1kqBQDlzZvUaKsX02pUS0kEpdKdM8tJk1vbN6kRwGyLOEjo6Cc1yZ5SFTxdYs0qzKqgo+2v7aCvKBCkkmCG2QzLU9ZJgEaQ4bSIoowcp0keyWwF83hzL3xio5BYrRU8WOaDwa8q1hFo5dsnzlVfntnihAmc6J0SbhpiTpOKktNT2cFpzygDRDQ10xwmGeUK61IKOmSR3IJpDx7vjFAyGhLH2PIoDlhGwXqEzZnLlVJYFbIbzB/GA0YKtAAVANgAFAGWAH8AgDgABAAJiVD/yq15bwPPt7REHvZPUgbCxfU1D18WLWwjT961F23n/LPauJY7XYcOHLkwpkzwxqojh7wzMLeisNHYUt4VffC9oYMtgBRZKvq93rcsW7p+jrv1Ourrp/u1oK7ptcsTrK05Dzf23T9LKl2bOCbJq5pMO/b49L3hU/Lzv4sML3t6OJlwz1Busu8Ha9L6mzLEu2cmPj8ekaYP+cjehMsDTkHtzeNnSUtDg0LYI3Dxz/PsZzNmeMc1hQ9cK6r8mr4td4oU37zywnWn5bcE387OEf57FQAxO5Fiug1A6pRoUDiUWESGGNwdYEsmlGNv+7LSLkTl6Fqc2WjAU1g6l8AlsEiZSCIPMAJEIOx2V+SvZr7Dq5oEIYyIBi3TLAH1sjFEEUAMtqQpijaMgijHU06oj1ljOhA1r7oa/BD0TcQ6kb0Lbjxj+4C5e7pzUJVeEGFajmy9eszAoUpp7OYrUeLISGgxxtioUPhgoVC8ZBZpWmYCLGiBO8XLowmjiZcqHDhmxoPo7majliGdapBgA31v4maGrpWQZkiQNd2qIJuYBdAvFu0eJHCxIsQDXeoYTudWcvmhSAfaGfrZhvezboVBs3WKcZDU+hhxfhKqoGMLGmyUHrYyCsooqhiiiuhpFJKK6Ms82ReMAbjzJv5MF87S8/8gY4w+9l9naGhoZkok0bDvTwUSBgJJxEkkkSRaBJDYkkcmxYUFqoLc/pR9LW3DHdwdeHZwEYJ3cEyTrH/I7ZJwXco5aOMHe3R7M+fiTyEVfuU465lYiKVevVckI8J) format('woff2');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.icon-fs:after {
+  font-family: "cool_font";
+  content: "-";
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+  font-style: normal;
+  font-weight: bolder;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin-left: 12px;
+}
+
+.reveal  .icon-fs:after {
+  margin-left: 0;
+}
+
+.reveal  .icon-fs:hover::after {
+content: "+";}
+
+.reveal  .icon-fsexit:after {
+  content: "_";
+}
+
+.reveal  .icon-fsexit:hover::after {
+  content: "=";
+}
+
+.backgrounds{background: #add9e4;
+  background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4));
+  background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background-color: #f7fbfc;}
+
+.reveal.fullscreen .backgrounds {
+  background: #add9e4;
+  background: -moz-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #f7fbfc), color-stop(100%, #add9e4));
+  background: -webkit-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -o-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: -ms-radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background: radial-gradient(center, circle cover, #f7fbfc 0%, #add9e4 100%);
+  background-color: #f7fbfc;
+}
+
+.fsfx-disabled {
+  display: none;
+}
+.no-fsfx .fsfx-disabled {
+  display: block;
+}
+
+.no-fsfx .fsfx-enabled {
+  display: none;
+}
+.reveal a {
+  line-height: 1.3em;
+}
